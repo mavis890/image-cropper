@@ -1,0 +1,208 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局样式设置 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f7;
+    min-height: 100vh;
+}
+
+/* 顶部标题区域 */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #fff, #f5f5f7);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #86868b;
+    font-size: 1.1rem;
+}
+
+/* 主要内容区域 */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 上传区域样式 */
+.upload-section {
+    margin-bottom: 40px;
+}
+
+.upload-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.upload-box:hover {
+    transform: translateY(-2px);
+}
+
+.upload-btn {
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #0077ed;
+}
+
+.upload-tip {
+    margin-top: 15px;
+    color: #86868b;
+    font-size: 0.9rem;
+}
+
+/* 编辑区域样式 */
+.edit-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.preview-container, .tools-container {
+    background: #fff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-container h3, .tools-container h3 {
+    color: #1d1d1f;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.image-container {
+    width: 100%;
+    min-height: 300px;
+    background: #f5f5f7;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-info {
+    color: #86868b;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* 裁剪工具区域 */
+.ratio-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.ratio-buttons button {
+    background: #f5f5f7;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #1d1d1f;
+}
+
+.ratio-buttons button:hover {
+    background: #e5e5e7;
+}
+
+.ratio-buttons button.active {
+    background: #0071e3;
+    color: #fff;
+}
+
+/* 下载按钮 */
+.download-btn {
+    width: 100%;
+    background: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.download-btn:not(:disabled):hover {
+    background: #0077ed;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #86868b;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .edit-section {
+        grid-template-columns: 1fr;
+    }
+
+    .upload-box {
+        padding: 20px;
+    }
+}
+
+/* Cropper.js 样式覆盖 */
+.cropper-view-box,
+.cropper-face {
+    border-radius: 8px;
+}
+
+.cropper-line,
+.cropper-point {
+    background-color: #0071e3;
+} 

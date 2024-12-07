@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片裁剪工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入 Cropper.js 库用于图片裁剪 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+</head>
+<body>
+    <!-- 顶部标题区域 -->
+    <header>
+        <h1>图片裁剪工具</h1>
+        <p>简单易用的在线图片裁剪工具</p>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 图片上传区域 -->
+        <section class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <input type="file" id="imageInput" accept="image/png,image/jpeg" hidden>
+                <button class="upload-btn" onclick="document.getElementById('imageInput').click()">
+                    选择图片
+                </button>
+                <p class="upload-tip">���持 PNG、JPG 格式</p>
+            </div>
+        </section>
+
+        <!-- 图片编辑区域 -->
+        <section class="edit-section">
+            <!-- 原始图片预览 -->
+            <div class="preview-container">
+                <h3>原始图片</h3>
+                <div class="image-container">
+                    <img id="sourceImage" src="" alt="预览图">
+                </div>
+                <div class="image-info">
+                    <p>尺寸：<span id="sourceSize">-</span></p>
+                </div>
+            </div>
+
+            <!-- 裁剪工具区域 -->
+            <div class="tools-container">
+                <h3>裁剪比例</h3>
+                <div class="ratio-buttons">
+                    <button data-ratio="1:1">1:1</button>
+                    <button data-ratio="4:3">4:3</button>
+                    <button data-ratio="16:9">16:9</button>
+                    <button data-ratio="free">自由比例</button>
+                </div>
+            </div>
+
+            <!-- 裁剪预览 -->
+            <div class="preview-container">
+                <h3>裁剪预览</h3>
+                <div class="image-container">
+                    <img id="previewImage" src="" alt="裁剪预览">
+                </div>
+                <div class="image-info">
+                    <p>裁剪后尺寸：<span id="previewSize">-</span></p>
+                </div>
+                <button id="downloadBtn" class="download-btn" disabled>下载裁剪图片</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚信息 -->
+    <footer>
+        <p>© 2024 图片裁剪工具</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
